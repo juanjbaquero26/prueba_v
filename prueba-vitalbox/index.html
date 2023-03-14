@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Formulario de registro de personas</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>Formulario de registro de personas</h1>
+  <form id="formulario">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="tipo_identificacion">Tipo de identificación:</label>
+    <select id="tipo_identificacion" name="tipo_identificacion" required>
+      <option value="">Seleccione una opción</option>
+      <option value="Cédula">Cédula</option>
+      <option value="Tarjeta de identidad">Tarjeta de identidad</option>
+      <option value="Pasaporte">Pasaporte</option>
+    </select>
+
+    <label for="numero_identificacion">Número de identificación:</label>
+    <input type="text" id="numero_identificacion" name="numero_identificacion" required>
+
+    <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+
+    <label for="peso">Peso (kg):</label>
+    <input type="number" id="peso" name="peso" step="0.01" min="0" max="500" required>
+
+    <label for="talla">Talla (m):</label>
+    <input type="number" id="talla" name="talla" step="0.01" min="0" max="3" required>
+
+    <button type="submit">Guardar</button>
+  </form>
+
+  <h2>Lista de personas</h2>
+  <input type="text" id="buscar" placeholder="Buscar">
+  <table id="personas">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Tipo de identificación</th>
+        <th>Número de identificación</th>
+        <th>Fecha de nacimiento</th>
+        <th>Peso (kg)</th>
+        <th>Talla (m)</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
